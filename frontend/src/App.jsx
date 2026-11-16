@@ -123,14 +123,14 @@ export default function App() {
               <p>APK {size('android')}</p>
               <a className="btn primary" href={download('android')}><Download size={18} /> Download APK</a>
               <small>Allow “Install unknown apps” for your browser if asked.</small>
-              {stats && <small className="count">{stats.android.downloads.toLocaleString()} downloads</small>}
+              {stats && <small className="count">{stats.android.downloads.toLocaleString()} {stats.android.downloads === 1 ? 'download' : 'downloads'}</small>}
             </div></Reveal>
             <Reveal><div className="card dl">
               <span className="ico brand-ico"><FaApple size={30} /></span><h3>macOS</h3>
               <p>DMG {size('mac')}</p>
               <a className="btn primary" href={download('mac')}><Download size={18} /> Download DMG</a>
               <small>First launch: right-click the app and choose Open.</small>
-              {stats && <small className="count">{stats.mac.downloads.toLocaleString()} downloads</small>}
+              {stats && <small className="count">{stats.mac.downloads.toLocaleString()} {stats.mac.downloads === 1 ? 'download' : 'downloads'}</small>}
             </div></Reveal>
           </div>
         </section>
